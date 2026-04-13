@@ -1,0 +1,9 @@
+[project]
+name = "goals-comparison-tool"
+version = "0.1.0"
+description = "파트원 목표 비교 대시보드 백엔드"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = []
