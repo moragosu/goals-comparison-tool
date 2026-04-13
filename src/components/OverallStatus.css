@@ -1,0 +1,105 @@
+.card-unit {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+.card-sub {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.status-achieved-text { color: var(--success); }
+.status-progress-text { color: var(--warning); }
+.status-behind-text   { color: var(--danger); }
+
+/* Member list */
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.member-row {
+  display: grid;
+  grid-template-columns: 36px 90px 1fr 60px 80px 70px;
+  align-items: center;
+  gap: 12px;
+}
+
+.member-rank {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.member-name-col {
+  font-weight: 600;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+.member-bar-col {
+  display: flex;
+  align-items: center;
+}
+
+.member-bar-col .progress-bar-wrapper {
+  width: 100%;
+}
+
+.member-pct {
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.member-count {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Category grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.category-card {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.category-count {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.category-rate {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .member-row {
+    grid-template-columns: 32px 80px 1fr 50px;
+  }
+  .member-count,
+  .member-row > :last-child:not(.member-count) {
+    display: none;
+  }
+}

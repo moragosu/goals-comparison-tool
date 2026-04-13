@@ -1,0 +1,177 @@
+/* Goal Selector */
+.goal-selector-card {
+  padding: 20px 24px;
+}
+
+.goal-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.goal-chip {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 2px solid var(--border);
+  background: #F8FAFC;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.goal-chip:hover {
+  border-color: var(--primary-light);
+  color: var(--primary);
+  background: #EEF2FF;
+}
+
+.goal-chip.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Bar Chart */
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 160px 70px;
+  align-items: center;
+  gap: 12px;
+}
+
+.bar-member-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.bar-container {
+  position: relative;
+  background: var(--border);
+  border-radius: 6px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  min-width: 4px;
+  transition: width 0.4s ease;
+  position: relative;
+}
+
+.bar-label-inside {
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.bar-label-outside {
+  position: absolute;
+  left: calc(100% + 4px);
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.bar-values {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Average line info */
+.avg-line-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding: 8px 0 0 92px;
+  border-top: 1px dashed var(--border);
+  margin-top: 4px;
+}
+
+.avg-marker-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Ranking table */
+.top-row {
+  background: #FAFAFA;
+}
+
+.rank-crown,
+.rank-medal {
+  font-size: 1.1rem;
+}
+
+.rank-num {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Matrix table */
+.matrix-table th,
+.matrix-table td {
+  white-space: nowrap;
+}
+
+.selected-row {
+  background: #EEF2FF;
+}
+
+.matrix-cell {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.matrix-cell.status-achieved {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.matrix-cell.status-progress {
+  background: var(--warning-bg);
+  color: #B45309;
+}
+
+.matrix-cell.status-behind {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .bar-row {
+    grid-template-columns: 70px 1fr 60px;
+  }
+  .bar-values {
+    display: none;
+  }
+}
